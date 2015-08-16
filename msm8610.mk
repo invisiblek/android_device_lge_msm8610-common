@@ -114,7 +114,7 @@ PRODUCT_COPY_FILES += \
 
 # TWRP
 PRODUCT_COPY_FILES += \
-    device/lge/msm8610-common/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+    device/lge/msm8610-common/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Offmode Charging
 PRODUCT_PACKAGES += \

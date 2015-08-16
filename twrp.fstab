@@ -1,0 +1,8 @@
+# mount point   fstype          device
+
+/data         auto      /dev/block/platform/msm_sdcc.1/by-name/userdata flags=encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
+/cache        auto      /dev/block/platform/msm_sdcc.1/by-name/cache
+/system       auto      /dev/block/platform/msm_sdcc.1/by-name/system
+/boot         emmc      /dev/block/platform/msm_sdcc.1/by-name/boot
+/recovery     emmc      /dev/block/platform/msm_sdcc.1/by-name/recovery flags=backup=1
+/external_sd  auto      /dev/block/mmcblk1p1
