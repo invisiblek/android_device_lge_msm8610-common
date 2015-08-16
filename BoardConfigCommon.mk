@@ -147,7 +147,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_RECOVERY_ALWAYS_WIPES := true
 
 # TWRP Recovery
-TARGET_RECOVERY_FSTAB := device/lge/msm8610-common/twrp.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # SELinux policies
