@@ -214,7 +214,6 @@ PRODUCT_PACKAGES += \
     copybit.msm8610\
     gralloc.msm8610 \
     hwcomposer.msm8610 \
-    keystore.msm8610 \
     lights.msm8610 \
     memtrack.msm8610 \
     power.msm8610
