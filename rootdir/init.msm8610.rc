@@ -4,6 +4,7 @@ import /init.msm8610_product.rc
 
 on early-init
     mkdir /firmware 0771 system system
+    mkdir /eri 0771 system radio
     symlink /data/tombstones /tombstones
 
     #enable KSM
@@ -27,12 +28,19 @@ on fs
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
 
+    wait /dev/block/platform/msm_sdcc.1/by-name/eri
+    exec /system/bin/e2fsck -p /dev/block/platform/msm_sdcc.1/by-name/eri
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/eri /eri nodev barrier=1 noauto_da_alloc
+
     write /sys/kernel/boot_adsp/boot 1
 
 # In order to keep plenty of large order chunks.
     write /proc/sys/vm/min_free_kbytes 5120
 
 on post-fs-data
+    chown system radio /eri
+    chmod 771 /eri
+
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
 
@@ -41,6 +49,7 @@ on post-fs-data
 on early-boot
 
 on boot
+    restorecon /eri
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
