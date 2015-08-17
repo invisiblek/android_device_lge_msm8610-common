@@ -51,6 +51,17 @@ on early-boot
 on boot
     restorecon /eri
 
+    # LP5521 LED
+    chown system system /sys/class/leds/R/device/led_current_index
+    chown system system /sys/class/leds/R/device/led_pattern
+    chown system system /sys/class/leds/R/device/led_blink
+    chown system system /sys/class/leds/R/brightness
+    chown system system /sys/class/leds/G/brightness
+    chown system system /sys/class/leds/B/brightness
+    chown system system /sys/class/leds/R/led_current
+    chown system system /sys/class/leds/G/led_current
+    chown system system /sys/class/leds/B/led_current
+
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
