@@ -472,4 +472,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Compat
 PRODUCT_PACKAGES += \
-    libboringssl-compat
+    libboringssl-compat \
+    libstlport
