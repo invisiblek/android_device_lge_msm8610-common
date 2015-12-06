@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-ifneq ($(filter w5 w5c w3ds,$(TARGET_DEVICE)),)
-
 LOCAL_PATH := $(call my-dir)
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+ifneq ($(filter w5 w5c w3ds, $(TARGET_DEVICE)),)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif
