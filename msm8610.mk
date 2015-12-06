@@ -477,4 +477,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Compat
 PRODUCT_PACKAGES += \
     libboringssl-compat \
+    libcnefeatureconfig \
     libstlport

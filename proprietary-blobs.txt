@@ -98,7 +98,6 @@ vendor/lib/libsystem_health_mon.so
 vendor/lib/libxml.so
 lib/libuicc.so
 lib/libmdmdetect.so
-lib/libcnefeatureconfig.so
 lib/libbinder.so
 lib/libvss_common_iface.so
 lib/libvss_common_idl.so
@@ -304,7 +303,6 @@ vendor/lib/libmm-abl.so
 #vendor/lib/hw/flp.default.so
 -vendor/lib/libdisp-aba.so
 -vendor/lib/libcneapiclient.so
--lib/libcnefeatureconfig.so
 #vendor/firmware/libpn547_fw.so
 
 system/lib/libaudioroute.so
