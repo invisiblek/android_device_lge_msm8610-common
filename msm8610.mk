@@ -472,7 +472,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.rat_on=legacy \
     camera2.portability.force_api=1 \
     ro.lge.proximity.delay=25 \
-    ro.telephony.ril_class=LgeRIL
+    ro.telephony.ril_class=LgeRIL \
+    persist.data.qmi.adb_logmask=0
 
 # Compat
 PRODUCT_PACKAGES += \
