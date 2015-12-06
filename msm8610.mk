@@ -473,7 +473,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera2.portability.force_api=1 \
     ro.lge.proximity.delay=25 \
     ro.telephony.ril_class=LgeRIL \
-    persist.data.qmi.adb_logmask=0
+    persist.data.qmi.adb_logmask=0 \
+    camera2.portability.force_api=1
 
 # Compat
 PRODUCT_PACKAGES += \
