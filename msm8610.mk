@@ -18,6 +18,9 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
+
 # Specific overlay
 DEVICE_PACKAGE_OVERLAYS += device/lge/msm8610-common/overlay
 
