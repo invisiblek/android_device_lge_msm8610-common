@@ -18,6 +18,10 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-dalvik-heap.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
+# Art
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-swap=false
+
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
 
