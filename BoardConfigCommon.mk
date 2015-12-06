@@ -153,5 +153,5 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 # qcom sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
-        device/lge/msm8610-common/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#        device/lge/msm8610-common/sepolicy
